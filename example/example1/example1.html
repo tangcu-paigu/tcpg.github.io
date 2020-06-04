@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=1272" />
+<title></title>
+<link rel="stylesheet" href="css/qietu.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body >
+
+
+
+<!--筛选弹窗-->
+<div class="dialog" id="dialog-type">
+	<div class="dialog-typehd">
+		筛选
+	</div>
+	<div class="dialog-typebd" id="checkbox-allbox1">
+		<div class="dialog-type-row active " >
+			<div class="dialog-type-tit">
+				<label class="checkbox-box checkbox-allbox"    v-bind:class="{active:isActive}">
+					<input type="checkbox" name="checkall" value="" 
+						 @click='checked' />
+					<i></i>
+				</label>
+				<span>种类</span>
+			</div>
+			<div class="dialog-type-list" id="checkbox-allbox1a">
+				<ul id="ulNum">
+					<li v-for="item in list" >
+						<label class="checkbox-box">
+							<input type="checkbox" name="check" value="" 
+							@click='checked2'	 v-model="item.checked"/>
+							<i></i>
+						</label>
+						<span>{{item.name}}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="dialog-type-row" id="checkbox-allbox2">
+			<div class="dialog-type-tit dialog-type-tit2">
+				<label class="checkbox-box checkbox-allbox" v-bind:class="{active:isActive2}">
+					<input type="checkbox" name="checkall1" value=""  @click='checked1' />
+					<i></i>
+				</label>
+				<span>国家</span>
+			</div>
+			<div class="dialog-type-list">
+				<ul class="hideul">
+					<li v-for="item2 in list2">
+						<label class="checkbox-box">
+							<input type="checkbox" name="check1" value="" @click='checked2B' v-model="item2.checked"/>
+							<i></i>
+						</label>
+						<span><img class="gq" :src="item2.img"/>{{item2.name}}</span>
+					</li>
+				</ul>
+				<div class="dialog-type-more">
+					<a href="#" class="">查看更多选项 ↓</a>
+					<a href="#" class="active">收起↑</a>
+				</div>
+			</div>
+		</div>
+		<div class="dialog-type-row">
+			<div class="dialog-type-tit">
+				<label class="radio-box1 radio-allbox1">
+					<input type="radio" name="radio" value="" />
+					<i></i>
+				</label>
+				<span>重要性</span>
+			</div>
+			<div class="dialog-type-list">
+				<ul>
+					<li>
+						<label class="radio-box1">
+							<input type="radio" name="radio" value="" />
+							<i></i>
+						</label>
+						<span>重要性高<img class="importance" src="imgs/fy31.png"/> </span>
+					</li>
+					<li>
+						<label class="radio-box1">
+							<input type="radio" name="radio" value="" />
+							<i></i>
+						</label>
+						<span>重要性中<img class="importance" src="imgs/fy24.png"/> </span>
+					</li>
+					<li>
+						<label class="radio-box1">
+							<input type="radio" name="radio" value="" />
+							<i></i>
+						</label>
+						<span>重要性低<img class="importance" src="imgs/fy32.png"/> </span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--筛选弹窗 end-->
+
+<script src="js/vue.min.js" ></script>
+<script>
+	
+	
+	
+	
+	
+	
+	
+	
+
+        
+        
+        
+        
+        
+        
+        var checkedA=0;
+        var checkedB=0;
+		var checkall = new Vue({
+			el:'#checkbox-allbox1',
+			data:{
+				isActive: false,
+				isActive2: false,
+				list:[
+					{name:'就业',checked: false},
+					{name:'贸易',checked: false},
+					{name:'通货膨胀',checked: false},
+					{name:'央行',checked: false},
+					{name:'收支平衡',checked: false},
+					{name:'经济活动',checked: false},
+					{name:'央行',checked: false},
+					{name:'信贷',checked: false},
+					{name:'信心指数',checked: false},
+					{name:'国债',checked: false},
+					{name:'资本市场',checked: false},
+					{name:'房产市场',checked: false},
+					{name:'其他',checked: false},
+				],
+				list2:[
+					{img:'imgs/fy30.png',name:'美国',checked: false},
+					{img:'imgs/fy29.png',name:'欧洲',checked: false},
+					{img:'imgs/fy28.png',name:'日本',checked: false},
+					{img:'imgs/fy27.png',name:'德国',checked: false},
+					{img:'imgs/fy26.png',name:'中国CNY',checked: false},
+					{img:'imgs/fy30.png',name:'美国',checked: false},
+					{img:'imgs/fy29.png',name:'欧洲',checked: false},
+					{img:'imgs/fy28.png',name:'日本',checked: false},
+					{img:'imgs/fy27.png',name:'德国',checked: false},
+					{img:'imgs/fy26.png',name:'中国CNY',checked: false},
+					{img:'imgs/fy30.png',name:'美国',checked: false},
+					{img:'imgs/fy29.png',name:'欧洲',checked: false},
+					{img:'imgs/fy28.png',name:'日本',checked: false},
+					{img:'imgs/fy27.png',name:'德国',checked: false},
+					{img:'imgs/fy26.png',name:'中国CNY',checked: false},
+					{img:'imgs/fy30.png',name:'美国',checked: false},
+					{img:'imgs/fy29.png',name:'欧洲',checked: false},
+					{img:'imgs/fy28.png',name:'日本',checked: false},
+					{img:'imgs/fy27.png',name:'德国',checked: false},
+					{img:'imgs/fy26.png',name:'中国CNY',checked: false},
+					{img:'imgs/fy30.png',name:'美国',checked: false},
+					{img:'imgs/fy29.png',name:'欧洲',checked: false},
+					{img:'imgs/fy28.png',name:'日本',checked: false},
+					{img:'imgs/fy27.png',name:'德国',checked: false},
+					{img:'imgs/fy26.png',name:'中国CNY',checked: false}
+				]
+				
+			},
+			methods:{
+				checked(){
+					
+					if(checkedA===0){
+						checkedA++;
+						this.list.forEach(item => {
+        					item.checked = true;
+        					this.isActive=true;
+     				   });
+					}else{
+						this.list.forEach(item => {
+        				  item.checked = false;
+        				  checkedA=0;
+        				  this.isActive=false;
+     				  	});
+					}
+					
+				},
+				checked1(){
+					
+					if(checkedB===0){
+						checkedB++;
+						this.list2.forEach(item2 => {
+        					item2.checked = true;
+        					this.isActive2=true;
+     				   });
+					}else{
+						this.list2.forEach(item2 => {
+        				  item2.checked = false;
+        				  checkedB=0;
+        				  this.isActive2=false;
+     				  	});
+					}
+					
+				},
+				checked2(){
+					this.$nextTick(
+					function xxx(){
+							
+						var trueNum = 0;
+					for(var i = 0;i<this.list.length;i++){
+						if(this.list[i].checked===true){
+							trueNum++;
+						}
+					}
+					if(trueNum===this.list.length-1&&event.target.checked){
+   							this.isActive=true;
+							trueNum=0;
+							checkedA=1;
+						}else{
+							this.isActive=false;
+							checkedA=0;
+						}
+					}
+					)
+						
+				},
+				checked2B(){
+					this.$nextTick(
+					function xxx2(){
+							
+						var trueNum = 0;
+					for(var i = 0;i<this.list2.length;i++){
+						if(this.list2[i].checked===true){
+							trueNum++;
+						}
+					}
+					if(trueNum===this.list2.length-1&&event.target.checked){
+   							this.isActive2=true;
+							trueNum=0;
+							checkedB=1;
+						}else{
+							this.isActive2=false;
+							checkedB=0;
+						}
+					}
+					)
+						
+				},
+				checkAll1:function(event){
+					a+=1;
+					alert(a);
+				}
+				
+			}
+		})
+        
+        
+        
+        
+        
+        
+        
+        
+</script>
+</body>
+</html>
+
