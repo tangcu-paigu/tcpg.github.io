@@ -28,7 +28,14 @@
 					</div>
 				</div>
 				<div class="body-r">
-					<ul>
+					<div class="body-nav">
+						<ul>
+							<li class="active">前端</li>
+							<li>java</li>
+						</ul>
+					</div>
+					<div class="page-body">
+						<ul class="page page0">
 						<li>
 							<div class="name">
 								依赖VUE的选框
@@ -48,6 +55,37 @@
 						<li></li>
 						<li></li>
 					</ul>
+					<ul class="page page1">
+						<li>
+							<div class="name">
+								空矩阵判断的坑：
+							</div>
+							<div class="describe">
+								<textarea class="describe-code" disabled="disabled">if( matrix==null || matrix.length==0 || matrix[0].length==0){
+
+       }
+       对于条件2 和 条件3：
+      如果这样创建一个矩阵：
+       int[][] array3 = new int[0][2];
+       
+       array3.length会返回 0
+       
+       matrix[0].length会报错 Index 0 out of bounds for length 0
+       
+       所以有条件2在条件3前面；
+       
+								</textarea>
+							</div>
+							<div class="exhibition">
+							</div>
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -56,6 +94,8 @@
 				asdasdasd
 			</div>
 		</div>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

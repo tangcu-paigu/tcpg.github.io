@@ -102,3 +102,40 @@ img{
 	background-color: #999;
 	color: #fff;
 }
+
+.page{
+	display: none;
+}
+.page0{
+	display: block;
+}
+.body-nav ul{
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.body-nav li{
+	float: left;
+	padding: 2px 15px;
+	color: #000;
+	font-size: 17px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.body-nav li.active,
+.body-nav li:hover{
+	background-color: #74ccff;
+}
+.page-body{
+	margin-top: 30px;
+}
+.describe-code{
+	display: block;
+	width: 100%;
+	min-height: 400px;
+	font-size: 20px;
+	resize: none;
+	text-indent: 2em;
+	margin-top: 10px;
+	padding: 15px;
+}
