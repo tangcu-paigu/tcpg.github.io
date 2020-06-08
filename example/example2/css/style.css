@@ -1,0 +1,51 @@
+.example1{
+	width:500px;
+	margin:  150px auto 0;
+	font-size: 20px;
+	text-align: center;
+}
+.nav li{
+	display: inline-block;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.nav li.active{
+	color: red;
+}
+.body li{
+	width: 30px;
+	color: #fff;
+	background-color: #000;
+	display: inline-block;
+}
+.body.swiper-container{
+	width: 105px;
+}
+.swiper-pagination-bullet{
+	background-color: #000!important;
+	color: #fff;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	border-radius: 0;
+	opacity: 1;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+	color: red;
+}
+.swiper-container2{
+}
+.example2 li{
+	margin: 0;
+	
+}
+.example2{
+	
+}
+
+.swiper-pagination2{
+	position: relative!important;
+	top: -5px!important;
+}

@@ -89,6 +89,7 @@ img{
 .exhibition{
 	color: #fff;
 	margin-top: 15px;
+	overflow: hidden;
 }
 .exhibition a{
 	display: block;
@@ -138,4 +139,35 @@ img{
 	text-indent: 2em;
 	margin-top: 10px;
 	padding: 15px;
+}
+.body-l-txt{
+	padding: 0 10px;
+	margin-top: 15px;
+}
+.index-btn{
+	width: 100px;
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+	color: #000;
+	border: 1px solid #000;
+	position: fixed;
+	line-height: 40px;
+	bottom: 150px;
+	left: 50%;
+	margin-left: -25px;
+}
+.index-btn:hover{
+	background-color: #000;
+	color: #fff;
+}
+.index-btn a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: inherit;
+	color: inherit;
+}
+.page0 li{
+	margin-top: 35px;
 }
